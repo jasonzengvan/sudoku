@@ -162,16 +162,20 @@ function renderPuzzle(puzzle) {
 		var el = document.getElementById(i);
 		var val = puzzle[i];
 		var cell;
+		var elClass;
 
 		if (val === 0) {
 			cell = document.createElement("input");
 			cell.setAttribute("maxlength", 1);
+			elClass = "editable";
 		} else {
 			cell = document.createElement("span");
 			cell.textContent = val;
+			elClass = "static";
 		}
 		
 		el.innerHTML = "";
+		el.setAttribute("class", elClass);
 		el.appendChild(cell);
 	}
 }

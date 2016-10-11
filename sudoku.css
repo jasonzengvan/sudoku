@@ -1,0 +1,12 @@
+.static, .editable{
+	width: 50px;
+	height: 50px;
+	padding: 0px;
+	margin: 0px;
+    border: 1px solid #DA0603;
+}
+
+.editable input{
+	width: 44px;
+	height: 44px;
+}
