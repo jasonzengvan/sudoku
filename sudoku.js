@@ -142,11 +142,13 @@ function solvePuzzle(puzzle, index) {
 // returns i, the index of invalid guess, if not a valid solution to puzzle,
 //         -1, if a valid solution
 function checkPuzzle(puzzle) {
+
 	for (var i = 0; i < 81; i++) {
 		var val = puzzle[i];
 		var isEmpty = !val;
 		var isValid = !checkCell(puzzle, i, val);
 		if (isEmpty || isValid) {
+			highlightCell(i);
 			return i;
 		}
 	}
@@ -154,12 +156,20 @@ function checkPuzzle(puzzle) {
 }
 
 function checkBoard() {
+	// reset color
+	renderPuzzle(getBoard());
 	return checkPuzzle(getBoard());
+}
+
+function highlightCell(index) {
+	var el = document.getElementById(index);
+	el.style.backgroundColor = "#ffffff";
 }
 
 function renderPuzzle(puzzle) {
 	for (var i = 0; i < 81; i++) {
 		var el = document.getElementById(i);
+		el.removeAttribute("style");
 		var val = puzzle[i];
 		var cell;
 		var elClass;
