@@ -199,6 +199,7 @@ function main() {
 	var solve = document.getElementById('solve');
 	solve.addEventListener('click', function() {
 		console.log("Solve on click");
+		puzzle = getBoard();
 		if(solvePuzzle(puzzle, 0)) {
 			console.log("Puzzle solved");
 			renderPuzzle(puzzle);
@@ -216,6 +217,12 @@ function main() {
 		} else {
 			console.log("Invalid guess at index " + isValid);
 		}
+	}, false);
+
+	var newGame = document.getElementById('newGame');
+	newGame.addEventListener('click', function() {
+		console.log("New Game on click");
+		renderPuzzle(generatePuzzle());
 	}, false);
 
 }
