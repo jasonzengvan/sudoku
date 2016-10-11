@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jason's Sudoku</title>
+	</head>
+	<body>
+		<div id=content>
+			<!-- This huge chunk of code is the 3x3x(3x3) table for the puzzle -->
+			<div id=puzzleBoard>
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=0>
+											<span>
+												0
+											</span>
+										</div>
+									</td>
+									<td class="cell">
+										<div id=1>
+											1
+										</div>
+									</td>
+									<td class="cell">
+										<div id=2>
+											2
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=9>
+											9
+										</div>
+									</td>
+									<td class="cell">
+										<div id=10>
+											10
+										</div>
+									</td>
+									<td class="cell">
+										<div id=11>
+											11
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=18>
+											18
+										</div>
+									</td>
+									<td class="cell">
+										<div id=19>
+											19
+										</div>
+									</td>
+									<td class="cell">
+										<div id=20>
+											20
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=3>
+											3
+										</div>
+									</td>
+									<td class="cell">
+										<div id=4>
+											4
+										</div>
+									</td>
+									<td class="cell">
+										<div id=5>
+											5
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=12>
+											12
+										</div>
+									</td>
+									<td class="cell">
+										<div id=13>
+											13
+										</div>
+									</td>
+									<td class="cell">
+										<div id=14>
+											14
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=21>
+											21
+										</div>
+									</td>
+									<td class="cell">
+										<div id=22>
+											22
+										</div>
+									</td>
+									<td class="cell">
+										<div id=23>
+											23
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=6>
+											6
+										</div>
+									</td>
+									<td class="cell">
+										<div id=7>
+											7
+										</div>
+									</td>
+									<td class="cell">
+										<div id=8>
+											8
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=15>
+											15
+										</div>
+									</td>
+									<td class="cell">
+										<div id=16>
+											16
+										</div>
+										<td class="cell">
+										<div id=17>
+											17
+										</div>
+									</td>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=24>
+											24
+										</div>
+									</td>
+									<td class="cell">
+										<div id=25>
+											25
+										</div>
+									</td>
+									<td class="cell">
+										<div id=26>
+											26
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=27>
+											27
+										</div>
+									</td>
+									<td class="cell">
+										<div id=28>
+											28
+										</div>
+									</td>
+									<td class="cell">
+										<div id=29>
+											29
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=36>
+											36
+										</div>
+									</td>
+									<td class="cell">
+										<div id=37>
+											37
+										</div>
+									</td>
+									<td class="cell">
+										<div id=38>
+											38
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=45>
+											45
+										</div>
+									</td>
+									<td class="cell">
+										<div id=46>
+											46
+										</div>
+									</td>
+									<td class="cell">
+										<div id=47>
+											47
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=30>
+											30
+										</div>
+									</td>
+									<td class="cell">
+										<div id=31>
+											31
+										</div>
+									</td>
+									<td class="cell">
+										<div id=32>
+											32
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=39>
+											39
+										</div>
+									</td>
+									<td class="cell">
+										<div id=40>
+											40
+										</div>
+									</td>
+									<td class="cell">
+										<div id=41>
+											41
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=48>
+											48
+										</div>
+									</td>
+									<td class="cell">
+										<div id=49>
+											49
+										</div>
+									</td>
+									<td class="cell">
+										<div id=50>
+											50
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=33>
+											33
+										</div>
+									</td>
+									<td class="cell">
+										<div id=34>
+											34
+										</div>
+									</td>
+									<td class="cell">
+										<div id=35>
+											35
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=42>
+											42
+										</div>
+									</td>
+									<td class="cell">
+										<div id=43>
+											43
+										</div>
+									</td>
+									<td class="cell">
+										<div id=44>
+											44
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=51>
+											51
+										</div>
+									</td>
+									<td class="cell">
+										<div id=52>
+											52
+										</div>
+									</td>
+									<td class="cell">
+										<div id=53>
+											53
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=54>
+											54
+										</div>
+									</td>
+									<td class="cell">
+										<div id=55>
+											55
+										</div>
+									</td>
+									<td class="cell">
+										<div id=56>
+											56
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=63>
+											63
+										</div>
+									</td>
+									<td class="cell">
+										<div id=64>
+											64
+										</div>
+									</td>
+									<td class="cell">
+										<div id=65>
+											65
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=72>
+											72
+										</div>
+									</td>
+									<td class="cell">
+										<div id=73>
+											73
+										</div>
+									</td>
+									<td class="cell">
+										<div id=74>
+											74
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=57>
+											57
+										</div>
+									</td>
+									<td class="cell">
+										<div id=58>
+											58
+										</div>
+									</td>
+									<td class="cell">
+										<div id=59>
+											59
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=66>
+											66
+										</div>
+									</td>
+									<td class="cell">
+										<div id=67>
+											67
+										</div>
+									</td>
+									<td class="cell">
+										<div id=68>
+											68
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=75>
+											75
+										</div>
+									</td>
+									<td class="cell">
+										<div id=76>
+											76
+										</div>
+									</td>
+									<td class="cell">
+										<div id=77>
+											77
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td>
+							<table>
+								<tr>
+									<td class="cell">
+										<div id=60>
+											60
+										</div>
+									</td>
+									<td class="cell">
+										<div id=61>
+											61
+										</div>
+									</td>
+									<td class="cell">
+										<div id=62>
+											62
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=69>
+											69
+										</div>
+									</td>
+									<td class="cell">
+										<div id=70>
+											70
+										</div>
+									</td>
+									<td class="cell">
+										<div id=71>
+											71
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="cell">
+										<div id=78>
+											78
+										</div>
+									</td>
+									<td class="cell">
+										<div id=79>
+											79
+										</div>
+									</td>
+									<td class="cell">
+										<div id=80>
+											80
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--The puzzle board ends here-->
+			<!--Game controllers-->
+			<div class="gameController">
+				<input id="solve" type="submit" class="gameController"/>
+			</div>
+			<div class="gameController">
+				<input id="check" type="submit" class="gameController"/>
+			</div>
+		</div>
+		<script type="text/javascript" src="sudoku.js"></script>
+	</body>
+</html>
