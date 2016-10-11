@@ -1,12 +1,37 @@
+body {
+	background-color: #faf8ef;
+}
+
+h1.title {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 40px;
+	color: #776e65;
+}
+
 #gameControllers {
 	margin-top: 20px;
 	display: table;
-	width: 423px;
+	width: 443px;
 }
 
-#content, #puzzleBoard {
-	width: 423px;
+#content {
+	width: 433px;
 	margin: 0 auto;
+}
+
+#puzzleBoard {
+	width: 433px;
+	height: 433px;
+	margin: 0 auto;
+	border-radius: 4px;
+	text-align: center;
+	background-color: #bbada0;
+	display: flex;
+	justify-content: center;
+}
+
+#puzzleTable {
+	align-self: center;
 }
 
 table, tr, td{
@@ -20,11 +45,11 @@ table {
 }
 
 td.cellGroupA {
-	background-color: #99ff99;
+	background-color: #ede0c8;
 }
 
 td.cellGroupB {
-	background-color: #99ff33;
+	background-color: #eee4da;
 }
 
 .static, .editable{
@@ -32,14 +57,14 @@ td.cellGroupB {
 	height: 45px;
 	padding: 0px;
 	margin: 0px;
-    border: 1px solid #ffffff;
+    border: 1px solid #bbada0;
 }
 
 
 .static {
 	text-align: center;
     font-size: 22px;
-    color: #6C0000;
+    color: #776e65;
 }
 
 .static > span {
@@ -62,11 +87,15 @@ td.cellGroupB {
 	padding: 0px;
 }
 
-input.gameController{
+button.gameController{
 	-webkit-appearance:default-button;
-	display: table-cell;
-	background-color: #99ff99;
-	width: 100px;
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 30px;
+	color: #faf8ef;
+	background-color: #776e65;
+	width: 206px;
 	height: 50px;
-
+	border: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
