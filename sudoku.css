@@ -1,12 +1,72 @@
-.static, .editable{
-	width: 50px;
-	height: 50px;
-	padding: 0px;
-	margin: 0px;
-    border: 1px solid #DA0603;
+#gameControllers {
+	margin-top: 20px;
+	display: table;
+	width: 423px;
 }
 
-.editable input{
-	width: 44px;
-	height: 44px;
+#content, #puzzleBoard {
+	width: 423px;
+	margin: 0 auto;
+}
+
+table, tr, td{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td.cellGroupA {
+	background-color: #99ff99;
+}
+
+td.cellGroupB {
+	background-color: #99ff33;
+}
+
+.static, .editable{
+	width: 45px;
+	height: 45px;
+	padding: 0px;
+	margin: 0px;
+    border: 1px solid #ffffff;
+}
+
+
+.static {
+	text-align: center;
+    font-size: 22px;
+    color: #6C0000;
+}
+
+.static > span {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	line-height: 45px;
+}
+
+.editable > input {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #4d4d4d;
+	font-size: 22px;
+	width: 45px;
+	height: 45px;
+	background: none;
+	text-align: center;
+	vertical-align: middle;;
+	left: -1px;
+	position: relative;
+	border: 0px;
+	padding: 0px;
+}
+
+input.gameController{
+	-webkit-appearance:default-button;
+	display: table-cell;
+	background-color: #99ff99;
+	width: 100px;
+	height: 50px;
+
 }

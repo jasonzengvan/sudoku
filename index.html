@@ -6,11 +6,12 @@
 	</head>
 	<body>
 		<div id=content>
+			<div header>
 			<!-- This huge chunk of code is the 3x3x(3x3) table for the puzzle -->
 			<div id=puzzleBoard>
 				<table>
 					<tr>
-						<td>
+						<td class="cellGroupA">
 							<table>
 								<tr>
 									<td class="cell">
@@ -67,7 +68,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupB">
 							<table>
 								<tr>
 									<td class="cell">
@@ -122,7 +123,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupA">
 							<table>
 								<tr>
 									<td class="cell">
@@ -179,7 +180,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<td class="cellGroupB">
 							<table>
 								<tr>
 									<td class="cell">
@@ -234,7 +235,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupA">
 							<table>
 								<tr>
 									<td class="cell">
@@ -289,7 +290,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupB">
 							<table>
 								<tr>
 									<td class="cell">
@@ -346,7 +347,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<td class="cellGroupA">
 							<table>
 								<tr>
 									<td class="cell">
@@ -401,7 +402,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupB">
 							<table>
 								<tr>
 									<td class="cell">
@@ -456,7 +457,7 @@
 								</tr>
 							</table>
 						</td>
-						<td>
+						<td class="cellGroupA">
 							<table>
 								<tr>
 									<td class="cell">
@@ -516,11 +517,9 @@
 			</div>
 			<!--The puzzle board ends here-->
 			<!--Game controllers-->
-			<div class="gameController">
-				<input id="solve" type="submit" class="gameController"/>
-			</div>
-			<div class="gameController">
-				<input id="check" type="submit" class="gameController"/>
+			<div id="gameControllers">
+				<input id="solve" type="submit" value="SOLVE" class="gameController"/>
+				<input id="check" type="submit" value="CHECK" class="gameController"/>
 			</div>
 		</div>
 		<script type="text/javascript" src="sudoku.js"></script>

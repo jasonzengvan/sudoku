@@ -42,7 +42,7 @@ function generatePuzzle() {
 	}
 
 	// replace a cell with 0 with probability of (81-25)/81
-	// hence keeps around 25 filled cells
+	// thus keeps around 25 filled cells
 	var rand;
 	for (var i = 0; i < 81; i++) {
 		rand = Math.floor(Math.random() * 81);
