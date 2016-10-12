@@ -148,7 +148,6 @@ function checkPuzzle(puzzle) {
 		var isEmpty = !val;
 		var isValid = !checkCell(puzzle, i, val);
 		if (isEmpty || isValid) {
-			highlightCell(i);
 			return i;
 		}
 	}
@@ -158,15 +157,33 @@ function checkPuzzle(puzzle) {
 function checkBoard() {
 	// reset color
 	renderPuzzle(getBoard());
-	return checkPuzzle(getBoard());
+
+	var isBoardValid = checkPuzzle(getBoard());
+	if (isBoardValid != -1) {
+		highlightInvalidCell(isBoardValid);
+		popMessage("The highlighted cell is not valid!");
+	} else {
+		popMessage("You have solved this ancient puzzle!");
+	}
+	return isBoardValid;
 }
 
-function highlightCell(index) {
+function clearMessage() {
+	popMessage("");
+}
+
+function popMessage(message) {
+	var el = document.getElementById("gameMessage");
+	el.innerHTML = message;
+}
+
+function highlightInvalidCell(index) {
 	var el = document.getElementById(index);
 	el.style.backgroundColor = "#ffffff";
 }
 
 function renderPuzzle(puzzle) {
+	clearMessage();
 	for (var i = 0; i < 81; i++) {
 		var el = document.getElementById(i);
 		el.removeAttribute("style");
