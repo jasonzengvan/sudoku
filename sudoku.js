@@ -156,7 +156,7 @@ function checkPuzzle(puzzle) {
 
 function checkBoard() {
 	// reset color
-	renderPuzzle(getBoard());
+	// renderPuzzle(getBoard());
 
 	var isBoardValid = checkPuzzle(getBoard());
 	if (isBoardValid != -1) {
@@ -182,7 +182,7 @@ function highlightInvalidCell(index) {
 	el.style.backgroundColor = "#ffffff";
 }
 
-function renderPuzzle(puzzle) {
+function renderNewPuzzle(puzzle) {
 	clearMessage();
 	for (var i = 0; i < 81; i++) {
 		var el = document.getElementById(i);
@@ -207,6 +207,13 @@ function renderPuzzle(puzzle) {
 	}
 }
 
+function renderPuzzle(puzzle) {
+	clearMessage();
+	for (var i = 0; i < 81; i++) {
+
+	}
+}
+
 function printPuzzle(puzzle) {
 	var cout = "The current puzzle is:";
 	for (var i = 0; i < 81; i++) {
@@ -220,7 +227,7 @@ function printPuzzle(puzzle) {
 
 function main() {
 	var puzzle = generatePuzzle();
-	renderPuzzle(puzzle);
+	renderNewPuzzle(puzzle);
 	printPuzzle(getBoard());
 
 	var solve = document.getElementById('solve');
@@ -229,7 +236,7 @@ function main() {
 		puzzle = getBoard();
 		if(solvePuzzle(puzzle, 0)) {
 			console.log("Puzzle solved");
-			renderPuzzle(puzzle);
+			renderNewPuzzle(puzzle);
 			printPuzzle(getBoard());
 		}
 	}, false);
@@ -249,7 +256,7 @@ function main() {
 	var newGame = document.getElementById('newGame');
 	newGame.addEventListener('click', function() {
 		console.log("New Game on click");
-		renderPuzzle(generatePuzzle());
+		renderNewPuzzle(generatePuzzle());
 	}, false);
 
 }

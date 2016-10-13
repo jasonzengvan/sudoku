@@ -35,6 +35,7 @@ table, tr, td{
 
 table {
     border-collapse: collapse;
+    border: 1px solid #bbada0;
 }
 
 td.cellGroupA {
@@ -58,6 +59,11 @@ td.cellGroupB {
 	text-align: center;
     font-size: 22px;
     color: #776e65;
+    background-color: #ede0c8;
+}
+
+.editable {
+	background-color: #eee4da;
 }
 
 .static > span {
@@ -67,7 +73,7 @@ td.cellGroupB {
 
 .editable > input {
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-	color: #4d4d4d;
+	color: #000000;
 	font-size: 22px;
 	width: 45px;
 	height: 45px;
@@ -83,7 +89,7 @@ td.cellGroupB {
 #gameControllers {
 	margin-top: 20px;
 	display: table;
-	width: 443px;
+	width: 433px;
 }
 
 button.gameController{
