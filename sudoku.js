@@ -241,13 +241,14 @@ function main() {
 	var solve = document.getElementById('solve');
 	solve.addEventListener('click', function() {
 		console.log("Solve on click");
-		puzzle = getBoard();
-		if(solvePuzzle(puzzle, 0)) {
+		var board = getBoard();
+		if(solvePuzzle(board, 0) && checkPuzzle(board)) {
 			console.log("Puzzle solved");
-			renderPuzzle(puzzle);
-			printPuzzle(getBoard());
+			renderPuzzle(board);
+			printPuzzle(board);
+			popMessage("Here you go! This is the solution")
 		} else {
-			popMessage("Oops! Current board is not solved Clear some invalid cells and try again");
+			popMessage("Oops! Current board is not solvable Clear some invalid cells and try again");
 		}
 	}, false);
 
