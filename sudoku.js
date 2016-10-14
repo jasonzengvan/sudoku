@@ -163,7 +163,7 @@ function checkBoard() {
 		highlightInvalidCell(isBoardValid);
 		popMessage("The highlighted cell is not valid!");
 	} else {
-		popMessage("You have solved this ancient puzzle!");
+		popMessage("Congratulation! You did it!");
 	}
 	return isBoardValid;
 }
@@ -210,7 +210,19 @@ function renderNewPuzzle(puzzle) {
 function renderPuzzle(puzzle) {
 	clearMessage();
 	for (var i = 0; i < 81; i++) {
-
+		var el = document.getElementById(i);
+		el.removeAttribute("style");
+		var val = puzzle[i];
+		var cell = el.children[0];
+		if (cell.tagName == "SPAN") {
+			//cell.textContent = puzzle[i];
+		} else if (cell.tagName == "INPUT") {
+			cell.value = puzzle[i];
+			//console.log("Rendering " + cell.value);
+		} else {
+			console.error("Unexpected tagName");
+		}
+		
 	}
 }
 
@@ -236,8 +248,10 @@ function main() {
 		puzzle = getBoard();
 		if(solvePuzzle(puzzle, 0)) {
 			console.log("Puzzle solved");
-			renderNewPuzzle(puzzle);
+			renderPuzzle(puzzle);
 			printPuzzle(getBoard());
+		} else {
+			popMessage("Oops! Current board is not solved Clear some invalid cells and try again");
 		}
 	}, false);
 
@@ -256,7 +270,8 @@ function main() {
 	var newGame = document.getElementById('newGame');
 	newGame.addEventListener('click', function() {
 		console.log("New Game on click");
-		renderNewPuzzle(generatePuzzle());
+		puzzle = generatePuzzle();
+		renderNewPuzzle(puzzle);
 	}, false);
 
 }

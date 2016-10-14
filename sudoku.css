@@ -2,9 +2,14 @@ body {
 	background-color: #faf8ef;
 }
 
-#title, #gameMessage {
+#title{
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	color: #776e65;
+}
+
+#gameMessage {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #bbada0;
 }
 
 #content {
@@ -73,7 +78,7 @@ td.cellGroupB {
 
 .editable > input {
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-	color: #000000;
+	color: #776e65;
 	font-size: 22px;
 	width: 45px;
 	height: 45px;
