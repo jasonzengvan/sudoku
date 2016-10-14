@@ -156,7 +156,7 @@ function checkPuzzle(puzzle) {
 
 function checkBoard() {
 	// reset color
-	// renderPuzzle(getBoard());
+	renderPuzzle(getBoard());
 
 	var isBoardValid = checkPuzzle(getBoard());
 	if (isBoardValid != -1) {
@@ -214,15 +214,11 @@ function renderPuzzle(puzzle) {
 		el.removeAttribute("style");
 		var val = puzzle[i];
 		var cell = el.children[0];
-		if (cell.tagName == "SPAN") {
-			//cell.textContent = puzzle[i];
-		} else if (cell.tagName == "INPUT") {
-			cell.value = puzzle[i];
-			//console.log("Rendering " + cell.value);
-		} else {
-			console.error("Unexpected tagName");
+		if (cell.tagName == "INPUT") {
+			if (puzzle[i] != 0) {
+				cell.value = puzzle[i];
+			}
 		}
-		
 	}
 }
 

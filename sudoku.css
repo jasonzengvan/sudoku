@@ -2,7 +2,16 @@ body {
 	background-color: #faf8ef;
 }
 
-#title{
+#header {
+
+}
+
+#title {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #776e65;
+}
+
+#subTitle {
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	color: #776e65;
 }
