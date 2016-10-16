@@ -11,7 +11,13 @@ body {
 	color: #776e65;
 }
 
-#subTitle {
+.description {
+	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	color: #776e65;
+}
+
+.bottomDescription {
+	font-size: 18px;
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	color: #776e65;
 }
@@ -116,6 +122,7 @@ button.gameController{
 	width: 128px;
 	height: 40px;
 	border: 0px;
+	cursor: pointer;
 }
 
 #check {
@@ -129,4 +136,18 @@ button.gameController{
 
 #newGame {
 	margin-left: 12.25px;
+}
+
+hr {
+	margin-top: 50px;
+	margin-bottom: 15px;
+	border: none;
+	border-bottom: 1px solid #d8d4d0;
+}
+
+a {
+    color: #776e65;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
 }
