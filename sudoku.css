@@ -110,10 +110,11 @@ td.cellGroupB {
 	margin-top: 20px;
 	display: table;
 	width: 433px;
+	display: flex;
+	justify-content: space-between;
 }
 
 button.gameController{
-	-webkit-appearance:default-button;
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	font-size: 18px;
 	color: #faf8ef;
@@ -126,16 +127,12 @@ button.gameController{
 }
 
 #check {
-	margin-right: 12.25px;
 }
 
 #solve {
-	margin-left: 12.25px;
-	margin-right: 12.25px;
 }
 
 #newGame {
-	margin-left: 12.25px;
 }
 
 hr {
