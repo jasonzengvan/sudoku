@@ -18,5 +18,5 @@ d. Again, randomly swap two of column(3 x i), (3 x i + 1), (3 x i + 2)
 3. empty some cells of the full board to make it a puzzle
 
 ##### Puzzle Solving
-This program basically runs a brute-force search algorithm since there is no better algorithms.  
-It tries or possibilities until find a valid solution.
+This program basically runs a brute-force search algorithm since there is no better algorithm.  
+It tries all possibilities until find a valid solution or notify the player to clean some invalid cells.
