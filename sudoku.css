@@ -22,7 +22,7 @@ body {
 	color: #776e65;
 }
 
-#gameMessage {
+#message {
 	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	color: #bbada0;
 }
@@ -104,6 +104,10 @@ td.cellGroupB {
 	position: relative;
 	border: 0px;
 	padding: 0px;
+}
+
+.highlighted {
+	background-color: #ffffff;
 }
 
 #gameControllers {
