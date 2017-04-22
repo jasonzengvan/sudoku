@@ -79,8 +79,9 @@ function GameManager() {
 		for (var i = 0; i < 9; i++) {
 			for (var j = 0; j < 9; j++) {
 				if (sudoku.puzzle[i][j] == 0) {
-					var val = $("#" + (i * 9 + j) + " input").val();
-					if (val != "") sudoku.board[i][j] = val;
+					var val = parseInt($("#" + (i * 9 + j) + " input").val());
+					if (val >= 1 && val <= 9) sudoku.board[i][j] = val;
+					else sudoku.board[i][j] = 0;
 				}
 			}
 		}
