@@ -183,8 +183,8 @@ function Sudoku() {
 			if (val < 1 || 9 < val) {
 				return {
 					solved: false,
-					row: row,
-					col: i
+					row: i,
+					col: col
 				};
 			}
 			ocur[val]++;

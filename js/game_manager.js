@@ -85,5 +85,6 @@ function GameManager() {
 				}
 			}
 		}
+		sudoku.printStates();
 	}
 }
