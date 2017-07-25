@@ -1,0 +1,76 @@
+body {
+	background-color: #faf8ef;
+	font-family: sans-serif;
+	color: #776e65;
+}
+
+.content {
+	width: 490px;
+	margin: 0 auto;
+}
+
+.board table {
+	border-spacing: 0;
+    border: 2px solid #bbada0;
+    border-radius: 4px;
+}
+
+.board td {
+	width: 50px;
+	height: 50px;
+	background-color: #eee4da;
+	text-align: center;
+	border: 1px solid #bbada0;
+	font-size: 22px;
+}
+
+.board .cell {
+	cursor: pointer;
+}
+
+.board .cell-invalid {
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+.board .cell-initial {
+	background-color: #ede0c8;
+}
+
+.controllers {
+	margin-top: 20px;
+}
+
+.controllers button {
+	width: 130px;
+	height: 40px;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 18px;
+	background-color: #776e65;
+	color: #ffffff;
+}
+
+.controllers .controller-left {
+	margin-right: 25px;
+}
+
+.controllers .controller-mid {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.controllers .controller-right {
+	margin-left: 25px;
+}
+
+.footer {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.footer a {
+	color: #776e65;
+	font-weight: bold;
+}
